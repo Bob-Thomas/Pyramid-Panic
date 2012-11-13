@@ -13,8 +13,12 @@ namespace PyramidPanic
 {
     public class MenuStartScene
     {
+        private enum buttonState { Start, Load, Help, Scores, Editor, Quit };
         //fields
         private Image start, load, help, scores, editor, quit;
+        private buttonState buttonstate;
+        private Color buttonColorActive = Color.Goldenrod;
+        private MouseState ms;
         private int top,left,space;
         private PyramidPanic game;
 
@@ -45,19 +49,120 @@ namespace PyramidPanic
             this.quit = new Image(this.game, new Vector2(this.left+space*5, this.top), "StartMenu//Button_quit");
         }
         //update
-        public void update()
+        public void update(GameTime gametime)
         {
+            if (Input.EdgeDetectKeyDown(Keys.Right))
+            {
+               this.buttonstate ++;
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Left))
+            {
+                this.buttonstate--;
+            }
+
+            if (this.buttonstate > buttonState.Quit)
+            {
+                buttonstate = buttonState.Start;
+            }
+            if (this.buttonstate < buttonState.Start)
+            {
+                buttonstate = buttonState.Quit;
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Enter)&&this.buttonstate == buttonState.Start)
+            {
+                this.game.GameState = new PlayScene(game);
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Load)
+            {
+                this.game.GameState = new LoadScene(game);
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Scores)
+            {
+                this.game.GameState = new ScoreScene(game);
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Help)
+            {
+                this.game.GameState = new HelpScene(game);
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Editor)
+            {
+                this.game.GameState = new LevelEditorScene(game);
+            }
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Quit)
+            {
+                this.game.GameState = new QuitScene(game);
+            }
+            /*ms = Mouse.GetState();
+             Rectangle mouseRectangle = new Rectangle((int)ms.X, (int)ms.Y, 10, 10);
+             if (mouseRectangle.Intersects(this.start.Rectangle))
+             {
+                 this.buttonstate = buttonState.Start;
+             }
+             else
+             if (mouseRectangle.Intersects(this.load.Rectangle))
+             {
+                 this.buttonstate = buttonState.Load;
+             }
+             else
+             if (mouseRectangle.Intersects(this.help.Rectangle))
+             {
+                 this.buttonstate = buttonState.Help;
+             }
+             else
+             if (mouseRectangle.Intersects(this.scores.Rectangle))
+             {
+                 this.buttonstate = buttonState.Scores;
+             }
+             else
+             if (mouseRectangle.Intersects(this.editor.Rectangle))
+             {
+                 this.buttonstate = buttonState.Editor;
+             }
+             else
+             if (mouseRectangle.Intersects(this.quit.Rectangle))
+             {
+                 this.buttonstate = buttonState.Quit;
+             }*/
         }
 
         //draw
         public void draw(GameTime gametime)
         {
-            this.start.Draw(this.game.SpriteBatch);
-            this.load.Draw(this.game.SpriteBatch);
-            this.help.Draw(this.game.SpriteBatch);
-            this.scores.Draw(this.game.SpriteBatch);
-            this.editor.Draw(this.game.SpriteBatch);
-            this.quit.Draw(this.game.SpriteBatch);
+            Color buttonColorStart = Color.White;
+            Color buttonColorLoad = Color.White;
+            Color buttonColorHelp = Color.White;
+            Color buttonColorEditor = Color.White;
+            Color buttonColorScores = Color.White;
+            Color buttonColorQuit = Color.White;
+
+            switch(this.buttonstate)
+            {
+                case buttonState.Start:
+                    buttonColorStart = this.buttonColorActive;
+                    break;
+                case buttonState.Load:
+                    buttonColorLoad = this.buttonColorActive;
+                    break;
+                case buttonState.Help:
+                    buttonColorHelp = this.buttonColorActive;
+                    break;
+                case buttonState.Editor:
+                    buttonColorEditor = this.buttonColorActive;
+                    break;
+                case buttonState.Scores:
+                    buttonColorScores = this.buttonColorActive;
+                    break;
+                case buttonState.Quit:
+                    buttonColorQuit = this.buttonColorActive;
+                    break;
+
+            }
+            this.start.Draw(this.game.SpriteBatch, buttonColorStart);
+            this.load.Draw(this.game.SpriteBatch, buttonColorLoad);
+            this.help.Draw(this.game.SpriteBatch, buttonColorHelp);
+            this.scores.Draw(this.game.SpriteBatch, buttonColorScores);
+            this.editor.Draw(this.game.SpriteBatch, buttonColorEditor);
+            this.quit.Draw(this.game.SpriteBatch, buttonColorQuit);
 
         }
     }

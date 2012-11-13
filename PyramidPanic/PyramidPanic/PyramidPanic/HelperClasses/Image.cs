@@ -18,6 +18,10 @@ namespace PyramidPanic
          private Rectangle rectangle;
          private Vector2 position;
          private PyramidPanic game;
+         public Rectangle Rectangle
+         {
+             get { return this.rectangle; }
+         }
          //Constructor
          public Image(PyramidPanic game,Vector2 position,string pathName)
          {
@@ -30,6 +34,11 @@ namespace PyramidPanic
          {
              //Draw
              spritebatch.Draw(this.texture, this.rectangle, Color.White);
+         }
+         public void Draw(SpriteBatch spritebatch,Color color)
+         {
+             //Draw
+             spritebatch.Draw(this.texture, this.rectangle, color);
          }
     }
 }

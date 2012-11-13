@@ -16,8 +16,13 @@ namespace PyramidPanic
         //fields
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        private StartScene startScene;
+        private IStateGame gameState;
 
+        public IStateGame GameState
+        {
+            get { return this.gameState; }
+            set { this.gameState = value; }
+        }
         public SpriteBatch SpriteBatch
         {
             get { return this.spriteBatch;  }
@@ -45,9 +50,9 @@ namespace PyramidPanic
         {
 
             this.spriteBatch = new SpriteBatch(GraphicsDevice);
-            this.startScene = new StartScene(this);
-        }
+            this.gameState = new StartScene(this);
 
+        }
         protected override void UnloadContent()
         {
 
@@ -59,8 +64,8 @@ namespace PyramidPanic
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-
-
+            gameState.update(gameTime);
+            Input.update();
             base.Update(gameTime);
         }
 
@@ -69,7 +74,7 @@ namespace PyramidPanic
         {
             GraphicsDevice.Clear(Color.Goldenrod);
             this.spriteBatch.Begin();
-            startScene.Draw(gameTime);
+            this.gameState.draw(gameTime);
             this.spriteBatch.End();
 
             base.Draw(gameTime);

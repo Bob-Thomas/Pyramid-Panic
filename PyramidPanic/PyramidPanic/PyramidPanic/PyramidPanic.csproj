@@ -107,8 +107,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gameScenes\HelpScene\HelpScene.cs" />
+    <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs" />
+    <Compile Include="gameScenes\LoadScene\LoadScene.cs" />
+    <Compile Include="gameScenes\QuitScene\QuitScene.cs" />
+    <Compile Include="gameScenes\ScoreScene\ScoreScene.cs" />
     <Compile Include="HelperClasses\Image.cs" />
     <Compile Include="gameScenes\StartScene\MenuStartScene.cs" />
+    <Compile Include="input\Input.cs" />
+    <Compile Include="gameScenes\PlayScene\PlayScene.cs" />
+    <Compile Include="IStateGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="game\Program.cs" />
     <Compile Include="game\PyramidPanic.cs" />
@@ -152,6 +160,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--
