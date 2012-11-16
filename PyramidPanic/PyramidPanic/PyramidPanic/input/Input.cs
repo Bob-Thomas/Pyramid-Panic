@@ -13,9 +13,10 @@ namespace PyramidPanic
     public static class Input
     {
         //fields
-        static KeyboardState ks, oks;
-        static MouseState ms, oms;
-        static GamePadState gps, ogps;
+        private static KeyboardState ks, oks;
+        private static MouseState ms, oms;
+        private static GamePadState gps, ogps;
+        private static Rectangle mouseRectangle;
         //constructor
         static Input()
         {
@@ -24,6 +25,7 @@ namespace PyramidPanic
             oms = ms;
             gps = GamePad.GetState(PlayerIndex.One);
             ogps = gps;
+            mouseRectangle = new Rectangle((int)ms.X, (int)ms.Y, 1, 1);
 
         }
 
@@ -32,6 +34,10 @@ namespace PyramidPanic
         {
             oks = ks;
             ks = Keyboard.GetState();
+            oms = ms;
+            ms = Mouse.GetState();
+            mouseRectangle.X = ms.X;
+            mouseRectangle.Y = ms.Y;
             
 
         }
@@ -46,6 +52,24 @@ namespace PyramidPanic
         public static bool EdgeDetectKeyDown(Keys key)
         {
             return (ks.IsKeyDown(key) && oks.IsKeyUp(key));
+        }
+        public static bool MouseEdgeDetectPressLeft()
+        {
+            return(ms.LeftButton == ButtonState.Pressed && oms.LeftButton == ButtonState.Released);
+        }
+        public static bool MouseEdgeDetectPressRight()
+        {
+            return (ms.LeftButton == ButtonState.Pressed && oms.LeftButton == ButtonState.Released);
+        }
+        public static Vector2 MousePos()
+        {
+            return (new Vector2(ms.X, ms.Y));
+        }
+        public static Rectangle MouseRectangle()
+        {
+            mouseRectangle.X = ms.X;
+            mouseRectangle.Y = ms.Y;
+            return mouseRectangle;
         }
 
         //draw

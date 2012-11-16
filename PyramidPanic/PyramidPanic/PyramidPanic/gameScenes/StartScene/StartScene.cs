@@ -34,7 +34,11 @@ namespace PyramidPanic
         //Update methode
         public void update(GameTime gameTime)
         {
-            menu.update(gameTime);
+            this.menu.update(gameTime);
+            if (Input.EdgeDetectKeyDown(Keys.Escape))
+            {
+                this.game.Exit();
+            }
         }
         //Draw metode
         public void draw(GameTime gameTime)

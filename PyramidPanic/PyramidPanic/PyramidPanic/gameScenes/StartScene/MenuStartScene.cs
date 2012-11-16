@@ -68,15 +68,15 @@ namespace PyramidPanic
             {
                 buttonstate = buttonState.Quit;
             }
-            if (Input.EdgeDetectKeyDown(Keys.Enter)&&this.buttonstate == buttonState.Start)
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Start )
             {
                 this.game.GameState = new PlayScene(game);
             }
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Load)
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Load )
             {
                 this.game.GameState = new LoadScene(game);
             }
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Scores)
+            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonstate == buttonState.Scores )
             {
                 this.game.GameState = new ScoreScene(game);
             }
@@ -92,37 +92,63 @@ namespace PyramidPanic
             {
                 this.game.GameState = new QuitScene(game);
             }
-            /*ms = Mouse.GetState();
-             Rectangle mouseRectangle = new Rectangle((int)ms.X, (int)ms.Y, 10, 10);
-             if (mouseRectangle.Intersects(this.start.Rectangle))
+            
+
+             if (Input.MouseRectangle().Intersects(this.start.Rectangle))
              {
                  this.buttonstate = buttonState.Start;
+                 if (Input.MouseEdgeDetectPressLeft() && this.buttonstate == buttonState.Start)
+                 {
+                     this.game.GameState = new PlayScene(this.game);
+                 }
+                 
              }
              else
-             if (mouseRectangle.Intersects(this.load.Rectangle))
+             if (Input.MouseRectangle().Intersects(this.load.Rectangle))
              {
                  this.buttonstate = buttonState.Load;
+                 if (Input.MouseEdgeDetectPressLeft() && this.buttonstate == buttonState.Load)
+                 {
+                     this.game.GameState = new LoadScene(this.game);
+                 }
              }
              else
-             if (mouseRectangle.Intersects(this.help.Rectangle))
+                 if (Input.MouseRectangle().Intersects(this.help.Rectangle))
              {
                  this.buttonstate = buttonState.Help;
+                 if (Input.MouseEdgeDetectPressLeft() && this.buttonstate == buttonState.Help)
+                 {
+                     this.game.GameState = new HelpScene(this.game);
+                 }
              }
              else
-             if (mouseRectangle.Intersects(this.scores.Rectangle))
+             if (Input.MouseRectangle().Intersects(this.scores.Rectangle))
              {
                  this.buttonstate = buttonState.Scores;
+                 if (Input.MouseEdgeDetectPressLeft() && this.buttonstate == buttonState.Scores)
+                 {
+                     this.game.GameState = new ScoreScene(this.game);
+                 }
              }
              else
-             if (mouseRectangle.Intersects(this.editor.Rectangle))
+             if (Input.MouseRectangle().Intersects(this.editor.Rectangle))
              {
                  this.buttonstate = buttonState.Editor;
+                 if (Input.MouseEdgeDetectPressLeft() && this.buttonstate == buttonState.Editor)
+                 {
+                     this.game.GameState = new LevelEditorScene(this.game);
+                 }
              }
              else
-             if (mouseRectangle.Intersects(this.quit.Rectangle))
-             {
-                 this.buttonstate = buttonState.Quit;
-             }*/
+                 if (Input.MouseRectangle().Intersects(this.quit.Rectangle))
+                 {
+                     this.buttonstate = buttonState.Quit;
+                     if (Input.MouseEdgeDetectPressLeft() && this.buttonstate == buttonState.Quit)
+                     {
+                         this.game.GameState = new QuitScene(this.game);
+                     }
+                 }
+                 
         }
 
         //draw
