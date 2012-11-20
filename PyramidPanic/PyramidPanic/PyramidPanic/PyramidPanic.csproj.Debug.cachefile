@@ -1,7 +1,6 @@
 Content\images\Background.xnb
 Content\images\Background2.xnb
 Content\images\Beetle.xnb
-Content\images\Block.xnb
 Content\images\Block_hor.xnb
 Content\images\Block_vert.xnb
 Content\images\Button_help.xnb
@@ -25,11 +24,8 @@ Content\images\Potion.xnb
 Content\images\Scarab.xnb
 Content\images\Scorpion.xnb
 Content\images\Title.xnb
-Content\images\Transparant.xnb
 Content\images\Treasure1.xnb
 Content\images\Treasure2.xnb
-Content\images\Wall1.xnb
-Content\images\Wall2.xnb
 Content\StartMenu\Background.xnb
 Content\StartMenu\Button_help.xnb
 Content\StartMenu\Button_leveleditor.xnb
@@ -38,3 +34,9 @@ Content\StartMenu\Button_quit.xnb
 Content\StartMenu\Button_scores.xnb
 Content\StartMenu\Button_start.xnb
 Content\StartMenu\Title.xnb
+Content\PlaySceneAssets\tiles\Block.xnb
+Content\PlaySceneAssets\tiles\Transparant.xnb
+Content\PlaySceneAssets\tiles\Wall1.xnb
+Content\PlaySceneAssets\tiles\Wall2.xnb
+Content\PlaySceneAssets\Levels\0.txt
+Content\PlaySceneAssets\Levels\1.txt

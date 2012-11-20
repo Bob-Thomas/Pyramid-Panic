@@ -29,15 +29,6 @@
       <Time>2012-02-02T16:33:02+01:00</Time>
     </Item>
     <Item>
-      <Source>images\Block.png</Source>
-      <Name>images\Block</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Block.xnb</Output>
-      <Time>2012-03-08T09:15:26+01:00</Time>
-    </Item>
-    <Item>
       <Source>images\Block_hor.png</Source>
       <Name>images\Block_hor</Name>
       <Importer>TextureImporter</Importer>
@@ -245,15 +236,6 @@
       <Time>2012-01-26T11:06:10+01:00</Time>
     </Item>
     <Item>
-      <Source>images\Transparant.png</Source>
-      <Name>images\Transparant</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Transparant.xnb</Output>
-      <Time>2012-03-08T09:20:10+01:00</Time>
-    </Item>
-    <Item>
       <Source>images\Treasure1.png</Source>
       <Name>images\Treasure1</Name>
       <Importer>TextureImporter</Importer>
@@ -270,24 +252,6 @@
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Treasure2.xnb</Output>
       <Time>2012-04-19T10:43:04+02:00</Time>
-    </Item>
-    <Item>
-      <Source>images\Wall1.png</Source>
-      <Name>images\Wall1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Wall1.xnb</Output>
-      <Time>2012-03-08T09:17:56+01:00</Time>
-    </Item>
-    <Item>
-      <Source>images\Wall2.png</Source>
-      <Name>images\Wall2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Wall2.xnb</Output>
-      <Time>2012-03-08T09:19:10+01:00</Time>
     </Item>
     <Item>
       <Source>StartMenu\Background.png</Source>
@@ -360,6 +324,42 @@
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Title.xnb</Output>
       <Time>2012-11-09T09:51:38.4670823+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\tiles\Block.png</Source>
+      <Name>PlaySceneAssets\tiles\Block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Block.xnb</Output>
+      <Time>2012-03-08T09:15:26+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\tiles\Transparant.png</Source>
+      <Name>PlaySceneAssets\tiles\Transparant</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Transparant.xnb</Output>
+      <Time>2012-03-08T09:20:10+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\tiles\Wall1.png</Source>
+      <Name>PlaySceneAssets\tiles\Wall1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Wall1.xnb</Output>
+      <Time>2012-03-08T09:17:56+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\tiles\Wall2.png</Source>
+      <Name>PlaySceneAssets\tiles\Wall2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Wall2.xnb</Output>
+      <Time>2012-03-08T09:19:10+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

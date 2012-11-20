@@ -18,7 +18,6 @@ namespace PyramidPanic
         private Image start, load, help, scores, editor, quit;
         private buttonState buttonstate;
         private Color buttonColorActive = Color.Goldenrod;
-        private MouseState ms;
         private int top,left,space;
         private PyramidPanic game;
 

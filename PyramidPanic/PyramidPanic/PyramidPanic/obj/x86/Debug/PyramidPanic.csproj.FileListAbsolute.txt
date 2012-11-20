@@ -7,7 +7,6 @@ C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\Pyramid
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Background.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Background2.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Beetle.xnb
-C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Block.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Block_hor.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Block_vert.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Button_help.xnb
@@ -31,11 +30,8 @@ C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\Pyramid
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Scarab.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Scorpion.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Title.xnb
-C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Transparant.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Treasure1.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Treasure2.xnb
-C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Wall1.xnb
-C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Wall2.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Background.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Button_help.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Button_leveleditor.xnb
@@ -44,3 +40,9 @@ C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\Pyramid
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Button_scores.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Button_start.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartMenu\Title.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Block.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Transparant.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Wall1.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\tiles\Wall2.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\0.txt
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\1.txt
