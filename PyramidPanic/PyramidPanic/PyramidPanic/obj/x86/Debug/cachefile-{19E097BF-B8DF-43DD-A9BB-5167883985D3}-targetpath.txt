@@ -1,5 +1,3 @@
-Content\images\Background.xnb
-Content\images\Background2.xnb
 Content\images\Beetle.xnb
 Content\images\Block_hor.xnb
 Content\images\Block_vert.xnb
@@ -38,5 +36,16 @@ Content\PlaySceneAssets\tiles\Block.xnb
 Content\PlaySceneAssets\tiles\Transparant.xnb
 Content\PlaySceneAssets\tiles\Wall1.xnb
 Content\PlaySceneAssets\tiles\Wall2.xnb
+Content\images\Background.xnb
+Content\PlaySceneAssets\background\Background2.xnb
+Content\PlaySceneAssets\pickups\Treasure1.xnb
+Content\PlaySceneAssets\pickups\Treasure2.xnb
+Content\PlaySceneAssets\pickups\Potion.xnb
+Content\PlaySceneAssets\pickups\Scarab.xnb
+Content\PlaySceneAssets\tiles\Door.xnb
+Content\PlaySceneAssets\Panel\Panel.xnb
+Content\PlaySceneAssets\Panel\Lives.xnb
+Content\fonts\font.xnb
+Content\PlaySceneAssets\Panel\Scarab.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\1.txt

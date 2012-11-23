@@ -43,8 +43,8 @@ namespace PyramidPanic
         //Draw metode
         public void draw(GameTime gameTime)
         {
-            this.background.Draw(this.game.SpriteBatch);
-            this.title.Draw(this.game.SpriteBatch);
+            this.background.Draw(gameTime);
+            this.title.Draw(gameTime);
             this.menu.draw(gameTime);
         }
     }

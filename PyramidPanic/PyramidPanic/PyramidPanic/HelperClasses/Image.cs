@@ -30,10 +30,10 @@ namespace PyramidPanic
              this.texture = game.Content.Load<Texture2D>(pathName);
              this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y,this.texture.Width,this.texture.Height);
          }
-         public void Draw(SpriteBatch spritebatch)
+         public void Draw(GameTime gameTime)
          {
              //Draw
-             spritebatch.Draw(this.texture, this.rectangle, Color.White);
+             this.game.SpriteBatch.Draw(this.texture, this.rectangle, Color.White);
          }
          public void Draw(SpriteBatch spritebatch,Color color)
          {

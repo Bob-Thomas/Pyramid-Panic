@@ -42,7 +42,7 @@ namespace PyramidPanic
         //draw
         public void draw(GameTime gameTime)
         {
-            this.game.GraphicsDevice.Clear(Color.Goldenrod);
+            this.game.GraphicsDevice.Clear(Color.White);
             this.level.draw(gameTime);
         }
     }
