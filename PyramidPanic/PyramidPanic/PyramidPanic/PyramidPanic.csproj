@@ -113,6 +113,11 @@
     <Compile Include="gameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="gameScenes\LoadScene\LoadScene.cs" />
+    <Compile Include="gameScenes\PlayScene\AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="gameScenes\PlayScene\Beetle\IBeetle.cs" />
+    <Compile Include="gameScenes\PlayScene\Beetle\Beetle.cs" />
+    <Compile Include="gameScenes\PlayScene\Beetle\WalkUP.cs" />
+    <Compile Include="gameScenes\PlayScene\Beetle\WalkDown.cs" />
     <Compile Include="gameScenes\PlayScene\scorpion\Iscorpion.cs" />
     <Compile Include="gameScenes\PlayScene\Level.cs" />
     <Compile Include="gameScenes\PlayScene\Panel\Panel.cs" />

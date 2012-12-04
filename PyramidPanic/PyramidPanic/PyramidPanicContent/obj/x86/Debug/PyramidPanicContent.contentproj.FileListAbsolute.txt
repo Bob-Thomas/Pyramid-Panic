@@ -1,1 +1,2 @@
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanicContent\obj\x86\Debug\PyramidPanicContent.contentprojResolveAssemblyReference.cache
+C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanicContent\obj\x86\Debug\PyramidPanicContent.contentprojResolveAssemblyReference.cache

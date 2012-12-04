@@ -22,6 +22,7 @@ namespace PyramidPanic
         private string levelPath;
         private Panel panel;
         private List<Scorpion> scorpionList;
+        private List<Beetle> beetleList;
         private List<Image> treasures;
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
@@ -40,6 +41,7 @@ namespace PyramidPanic
             this.lines = new List<string>();
             this.treasures = new List<Image>();
             this.scorpionList = new List<Scorpion>();
+            this.beetleList = new List<Beetle>();
             this.panel = new Panel(this.game, new Vector2(0, 448));
             StreamReader reader = new StreamReader(this.levelPath);
             string line = reader.ReadLine();
@@ -71,16 +73,13 @@ namespace PyramidPanic
         {
             switch (blockElement)
             {
-                case 'v':
-                    this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pushable\Block_vert"));
-                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'v');
-                case 'h':
-                    this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pushable\Block_hor"));
-                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'h');
 
-                case 's':
+                case 'S':
                     this.scorpionList.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
  	                 return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 's');
+                case 'B':
+                     this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
+                     return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'b');
 
                 case 'q':
                     this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Scarab"));
@@ -123,6 +122,10 @@ namespace PyramidPanic
             {
                 scorpion.Update(gametime);
             }
+            foreach (Beetle beetle in this.beetleList)
+            {
+                beetle.Update(gametime);
+            }
         }
         public void draw(GameTime gametime)
         {
@@ -138,6 +141,10 @@ namespace PyramidPanic
             foreach (Scorpion scorpion in this.scorpionList)
             {
                 scorpion.Draw(gametime);
+            }
+            foreach (Beetle beetle in this.beetleList)
+            {
+                beetle.Draw(gametime);
             }
             foreach (Image image in this.treasures)
             {
