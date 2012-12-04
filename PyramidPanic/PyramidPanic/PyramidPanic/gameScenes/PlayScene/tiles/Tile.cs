@@ -20,6 +20,11 @@ namespace PyramidPanic
         private Vector2 position;
         private Rectangle rectangle;
         private char charItem;
+        public Rectangle Rectangle
+        {
+            get { return this.rectangle; }
+            set { this.rectangle = value; }
+        }
         
         public Tile(PyramidPanic game,string tileName
                                     ,Vector2 position,TileCollision blockCollision,char charItem)

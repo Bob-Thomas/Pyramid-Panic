@@ -55,3 +55,8 @@ C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\Pyramid
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Lives.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\fonts\font.xnb
 C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Panel\Scarab.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\pushable\Block_hor.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\pushable\Block_vert.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Enemy's\Scorpion.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Enemy's\Mummy.xnb
+C:\Users\bob\Documents\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Enemy's\Beetle.xnb

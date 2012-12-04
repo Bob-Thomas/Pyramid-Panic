@@ -47,5 +47,10 @@ Content\PlaySceneAssets\Panel\Panel.xnb
 Content\PlaySceneAssets\Panel\Lives.xnb
 Content\fonts\font.xnb
 Content\PlaySceneAssets\Panel\Scarab.xnb
+Content\PlaySceneAssets\pushable\Block_hor.xnb
+Content\PlaySceneAssets\pushable\Block_vert.xnb
+Content\PlaySceneAssets\Enemy's\Scorpion.xnb
+Content\PlaySceneAssets\Enemy's\Mummy.xnb
+Content\PlaySceneAssets\Enemy's\Beetle.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\1.txt

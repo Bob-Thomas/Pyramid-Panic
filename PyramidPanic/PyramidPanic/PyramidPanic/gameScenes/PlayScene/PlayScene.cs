@@ -38,6 +38,7 @@ namespace PyramidPanic
         //update
         public void update(GameTime gameTime)
         {
+            this.level.update(gameTime);
         }
         //draw
         public void draw(GameTime gameTime)

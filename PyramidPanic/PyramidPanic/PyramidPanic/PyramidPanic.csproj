@@ -113,8 +113,12 @@
     <Compile Include="gameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="gameScenes\LoadScene\LoadScene.cs" />
+    <Compile Include="gameScenes\PlayScene\scorpion\Iscorpion.cs" />
     <Compile Include="gameScenes\PlayScene\Level.cs" />
     <Compile Include="gameScenes\PlayScene\Panel\Panel.cs" />
+    <Compile Include="gameScenes\PlayScene\scorpion\Scorpion.cs" />
+    <Compile Include="gameScenes\PlayScene\scorpion\WalkLeft.cs" />
+    <Compile Include="gameScenes\PlayScene\scorpion\WalkRight.cs" />
     <Compile Include="gameScenes\PlayScene\tiles\Tile.cs" />
     <Compile Include="gameScenes\QuitScene\QuitScene.cs" />
     <Compile Include="gameScenes\ScoreScene\ScoreScene.cs" />
