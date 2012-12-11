@@ -35,8 +35,8 @@ namespace PyramidPanic
 
             set {
                 this.position = value;
-                this.rectangle.X = (int)this.position.X;
-                this.rectangle.Y = (int)this.position.Y;
+                this.rectangle.X = (int)this.position.X + 16;
+                this.rectangle.Y = (int)this.position.Y + 16;
                 }
         }
         public PyramidPanic Game
@@ -51,6 +51,11 @@ namespace PyramidPanic
         {
             get { return this.texture; }
         }
+        public AnimatedSprite State
+        {
+            get { return this.state; }
+            set { this.state = value; }
+        }
         //constructor
         public Explorer(PyramidPanic game,Vector2 position,float speed)
         {
@@ -58,9 +63,9 @@ namespace PyramidPanic
             this.game = game;
             this.texture = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Player\Explorer");
             this.position = position;
-            this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, texture.Width/4, texture.Height);
+            this.rectangle = new Rectangle((int)this.position.X + 16, (int)this.position.Y + 16, texture.Width/4, texture.Height);
             this.speed = speed;
-            this.state = new Left(this);
+            this.state = new Idle(this);
         }
         //initialize
         public void initialize()
@@ -76,34 +81,7 @@ namespace PyramidPanic
         //update
         public void Update(GameTime gameTime)
         {
-            if(Keyboard.GetState().GetPressedKeys().Length == 0)
-            {
-                this.state = new Idle(this);
-            }
-            else{
-            
-                if (Input.EdgeDetectKeyDown(Keys.D))
-                {
-                    this.state = new Right(this);
-                }
-                else
-                if (Input.EdgeDetectKeyDown(Keys.A))
-                {
-                    this.state = new Left(this);
-                }
-                else
-                if (Input.EdgeDetectKeyDown(Keys.W))
-                {
-                    this.state = new Up(this);
-                }
-                else
-                if (Input.EdgeDetectKeyDown(Keys.S))
-                {
-                    this.state = new Down(this);
-                }
-            }
                 this.state.Update(gameTime);
-
         }
 
         //draw

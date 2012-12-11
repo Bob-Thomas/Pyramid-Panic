@@ -49,10 +49,18 @@ namespace PyramidPanic
             return ks.IsKeyDown(key);
             
         }
+        public static bool DetectKeyUp(Keys key)
+        {
+
+            return ks.IsKeyUp(key);
+
+        }
         public static bool EdgeDetectKeyDown(Keys key)
         {
             return (ks.IsKeyDown(key) && oks.IsKeyUp(key));
         }
+
+
         public static bool MouseEdgeDetectPressLeft()
         {
             return(ms.LeftButton == ButtonState.Pressed && oms.LeftButton == ButtonState.Released);

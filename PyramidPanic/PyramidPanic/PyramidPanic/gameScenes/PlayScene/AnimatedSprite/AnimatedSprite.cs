@@ -15,8 +15,8 @@ namespace PyramidPanic
     {
         //Field
         private IAnimatedSprite animatedSprite;
-        protected int[] xValue = { 0, 32, 64, 96 };
-        private int i = 0;
+        private int[] xValue = { 0, 32, 64, 96 };
+        protected int i = 0;
         private float timer;
         protected float angle = 0f;
 
@@ -25,7 +25,6 @@ namespace PyramidPanic
         {
             this.animatedSprite = animatedSprite;
         }
-
         public virtual void Update(GameTime gameTime)
         {
             //Dit is de code voor de animatie van de sprite

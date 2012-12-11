@@ -22,6 +22,8 @@ namespace PyramidPanic
         public Right(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
+            this.angle = 0f;
+            this.i = 0;
         }
         //initialize
         public void initialize()
@@ -39,6 +41,18 @@ namespace PyramidPanic
         {
             base.Update(gameTime);
             this.explorer.Position += new Vector2(this.explorer.Speed, 0);
+            if(Input.DetectKeyUp(Keys.D))
+            {
+                float modulo = this.explorer.Position.X % 32;
+                if (modulo >= 32f - this.explorer.Speed)
+                {
+                    int geheelAantalmalen32 = (int)this.explorer.Position.X / 32;
+                    this.explorer.Position = new Vector2((geheelAantalmalen32 * 32) + 1 * 32, this.explorer.Position.Y);
+                    this.explorer.State = new Idle(this.explorer, this.angle);
+                }
+               
+                Console.WriteLine(modulo);
+            }
             
         }
 
