@@ -21,22 +21,22 @@ namespace PyramidPanic
             this.beetle = beetle;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             //De beetle loopt naar rechts
             this.beetle.Position += new Vector2(0f,this.beetle.Speed);
-            if (this.beetle.Position.Y > 482-32*3)
+            if (this.beetle.Position.Y > this.beetle.Bottom)
             {
                 this.beetle.State = new WalkUP(beetle);
             }
             //Dit is de code voor de animatie van de sprite
             this.angle = (float)Math.PI;
-            base.update(gameTime);
+            base.Update(gameTime);
         }
 
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
-            base.draw(gameTime);
+            base.Draw(gameTime);
         }
     }
 }

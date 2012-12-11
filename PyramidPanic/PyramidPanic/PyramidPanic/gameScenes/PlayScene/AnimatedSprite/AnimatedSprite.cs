@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -9,25 +9,26 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-
 namespace PyramidPanic
 {
-    public class AnimatedSprite
+    public abstract class AnimatedSprite
     {
-        private Beetle beetle;
-        protected float angle;
-        private int[] xValue = { 0, 32, 64, 96 };
+        //Field
+        private IAnimatedSprite animatedSprite;
+        protected int[] xValue = { 0, 32, 64, 96 };
         private int i = 0;
         private float timer;
+        protected float angle = 0f;
 
-
-        public AnimatedSprite(Beetle beetle)
+        //Constructor
+        public AnimatedSprite(IAnimatedSprite animatedSprite)
         {
-            this.beetle = beetle;
+            this.animatedSprite = animatedSprite;
         }
 
-        public void update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
+            //Dit is de code voor de animatie van de sprite
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (this.timer > 1f / 8f)
             {
@@ -39,17 +40,17 @@ namespace PyramidPanic
                 }
             }
         }
-        public void draw(GameTime gametime)
-        {
-        this.beetle.Game.SpriteBatch.Draw(this.beetle.Texture,
-                                       this.beetle.Rectangle,
-                                       new Rectangle(this.xValue[this.i], 0, 32, 32),
-                                       Color.Goldenrod,
-                                       this.angle,
-                                       new Vector2(16f, 16f),
-                                       SpriteEffects.None,
-                                       0f);
-        }
 
+        public virtual void Draw(GameTime gameTime)
+        {
+            this.animatedSprite.Game.SpriteBatch.Draw(this.animatedSprite.Texture,
+                                              this.animatedSprite.Rectangle,
+                                              new Rectangle(this.xValue[this.i], 0, 32, 32),
+                                              Color.White,
+                                              this.angle,
+                                              new Vector2(16f, 16f),
+                                              SpriteEffects.None,
+                                              0f);
+        }
     }
 }

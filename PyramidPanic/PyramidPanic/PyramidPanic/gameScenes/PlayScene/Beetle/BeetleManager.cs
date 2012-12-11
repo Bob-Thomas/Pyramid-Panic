@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+
+namespace PyramidPanic
+{
+    public class BeetleManager
+    {
+        //fields
+        private static Level level;
+
+        //properties
+       public static Level Level
+        {
+            set
+            {
+                level = value;
+                CollisionWallBeetleUp();
+                CollisionWallBeetleDown();
+
+            }
+
+        }
+
+       public  static void CollisionWallBeetleUp()
+        {
+            foreach (Beetle beetle in level.BeetleList)
+            {
+                for (int i = (int)(beetle.Position.Y / 32); i >= 0; i--)
+                {
+                    if (level.Tiles[(int)(beetle.Position.X / 32), i].TileCollision == TileCollision.Notpassable)
+                    {
+                        beetle.Top = (i + 1) * 32;
+                        break;
+                    }
+                }
+            }
+        }
+        public static void CollisionWallBeetleDown()
+        {
+            foreach (Beetle beetle in level.BeetleList)
+            {
+                for (int i = (int)(beetle.Position.Y / 32); i <=13; i++)
+                {
+                    if (level.Tiles[(int)(beetle.Position.X / 32), i].TileCollision == TileCollision.Notpassable)
+                    {
+                        beetle.Bottom = (i - 1 ) * 32;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class Beetle
+    public class Beetle : IAnimatedSprite
     {
         //Field
         private PyramidPanic game;
@@ -20,13 +20,27 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private IBeetle state;
         private float speed;
+        private float top;
+        private float bottom;
 
 
         //Properties
+        public float Top
+        {
+
+            get { return this.top; }
+            set { this.top = value; }
+        }
+        public float Bottom
+        {
+            get { return this.bottom; }
+            set { this.bottom = value; }
+        }
         public float Speed
         {
             get { return this.speed; }
         }
+
         public Vector2 Position
         {
             get { return this.position; }
@@ -37,7 +51,7 @@ namespace PyramidPanic
                 this.rectangle.Y = (int)this.position.Y + 16;
             }
         }
-        
+
         public PyramidPanic Game
         {
             get { return this.game; }
@@ -66,9 +80,9 @@ namespace PyramidPanic
             this.game = game;
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Enemy's\Beetle");
             this.position = position;
-            this.speed = 1;
+            this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
-            this.state = new WalkDown(this);
+            this.state = new WalkUP(this);
         }
 
         //Update

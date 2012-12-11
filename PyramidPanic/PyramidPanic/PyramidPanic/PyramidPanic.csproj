@@ -16,7 +16,7 @@
     <XnaProfile>HiDef</XnaProfile>
     <XnaCrossPlatformGroupID>ecaf6237-8007-4bcc-9c30-2c49a84a5e0d</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>pyramid.ico</ApplicationIcon>
+    <ApplicationIcon>HelperClasses\pyramid.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -110,10 +110,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gameScenes\PlayScene\Beetle\BeetleManager.cs" />
     <Compile Include="gameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="gameScenes\LoadScene\LoadScene.cs" />
     <Compile Include="gameScenes\PlayScene\AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="gameScenes\PlayScene\AnimatedSprite\IAnimatedSprite.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\Down.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\Up.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\Left.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\Idle.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\Explorer.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\Right.cs" />
+    <Compile Include="gameScenes\PlayScene\scorpion\ScorpionManager.cs" />
     <Compile Include="gameScenes\PlayScene\Beetle\IBeetle.cs" />
     <Compile Include="gameScenes\PlayScene\Beetle\Beetle.cs" />
     <Compile Include="gameScenes\PlayScene\Beetle\WalkUP.cs" />
@@ -140,7 +149,7 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
-    <Content Include="pyramid.ico" />
+    <Content Include="HelperClasses\pyramid.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PyramidPanicContent\PyramidPanicContent.contentproj">

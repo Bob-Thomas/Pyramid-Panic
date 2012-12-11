@@ -18,6 +18,7 @@ namespace PyramidPanic
         private PyramidPanic game;
         private Texture2D texture;
         private Vector2 position;
+        private TileCollision tileCollision;
         private Rectangle rectangle;
         private char charItem;
         public Rectangle Rectangle
@@ -25,11 +26,16 @@ namespace PyramidPanic
             get { return this.rectangle; }
             set { this.rectangle = value; }
         }
+        public TileCollision TileCollision
+        {
+            get { return this.tileCollision;  }
+        }
         
         public Tile(PyramidPanic game,string tileName
-                                    ,Vector2 position,TileCollision blockCollision,char charItem)
+                                    ,Vector2 position,TileCollision tileCollision,char charItem)
         {
             this.game = game;
+            this.tileCollision = tileCollision;
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\tiles\"+tileName);
             this.position = position;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, texture.Width, texture.Height);

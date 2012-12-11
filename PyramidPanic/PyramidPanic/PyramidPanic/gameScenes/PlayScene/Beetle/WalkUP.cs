@@ -19,26 +19,26 @@ namespace PyramidPanic
         public WalkUP(Beetle beetle) : base(beetle)
         {
             this.beetle = beetle;
+            this.angle = 0;
         }        
         
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             //De beetle loopt naar rechts
 
             this.beetle.Position -= new Vector2(0f,this.beetle.Speed );
-            if (this.beetle.Position.Y < 32)
+            if (this.beetle.Position.Y < this.beetle.Top)
             {
                 this.beetle.State = new WalkDown(this.beetle);
             }
-            this.angle = 0f;
-            base.update(gameTime);
+            base.Update(gameTime);
             //Dit is de code voor de animatie van de sprite
             
         }
         
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
-            base.draw(gameTime);
+            base.Draw(gameTime);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class Scorpion
+    public class Scorpion : IAnimatedSprite
     {
         //Field
         private PyramidPanic game;
@@ -20,13 +20,27 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private IScorpion state;
         private float speed;
+        private float left;
+        private float right;
 
 
         //Properties
+        public float Left
+        {
+
+            get { return this.left; }
+            set { this.left = value; }
+        }
+        public float Right
+        {
+            get { return this.right; }
+            set { this.right = value; }
+        }
         public float Speed
         {
             get { return this.speed; }
         }
+
         public Vector2 Position
         {
             get { return this.position; }

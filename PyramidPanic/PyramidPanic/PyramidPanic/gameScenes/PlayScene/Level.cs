@@ -20,12 +20,26 @@ namespace PyramidPanic
         private Tile[,] tiles;
         private Image background;
         private string levelPath;
+        private Explorer explorer;
         private Panel panel;
         private List<Scorpion> scorpionList;
         private List<Beetle> beetleList;
         private List<Image> treasures;
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
+
+        public List<Beetle> BeetleList
+        {
+            get { return this.beetleList; }
+        }
+        public List<Scorpion> ScorpionList
+        {
+            get { return this.scorpionList; }
+        }
+        public Tile[,] Tiles
+        {
+            get { return this.tiles;  }
+        }
         
 
 
@@ -33,7 +47,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game,int levelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+            this.levelPath = @"Content\PlaySceneAssets\Levels\"+levelIndex+".txt";
             this.loadAssets();
         }
         private void loadAssets()
@@ -65,6 +79,8 @@ namespace PyramidPanic
                     this.tiles[column, row] = loadTile(blockElement, column * GRIDWIDTH, row * GRIDHEIGHT);
                 }
             }
+            BeetleManager.Level = this;
+            ScorpionManager.Level = this;
             
            
             
@@ -73,13 +89,15 @@ namespace PyramidPanic
         {
             switch (blockElement)
             {
-
+                case 'B':
+                    this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
+                    return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'b');
+                case 'E':
+                   this.explorer = new Explorer(this.game,new Vector2(x,y),2.0f);
+                    return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'E');
                 case 'S':
                     this.scorpionList.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
  	                 return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 's');
-                case 'B':
-                     this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
-                     return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'b');
 
                 case 'q':
                     this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Scarab"));
@@ -99,8 +117,6 @@ namespace PyramidPanic
 
                 case 'x':
                     return new Tile(this.game, @"Wall1", new Vector2(x, y), TileCollision.Notpassable, 'x');
-                case 'i':
-                    return new Tile(this.game, @"Wall2", new Vector2(x, y), TileCollision.Passable, 'i');
                 case 'y':
                     return new Tile(this.game, @"Wall2", new Vector2(x, y), TileCollision.Notpassable, 'y');
                 case 'w':
@@ -126,6 +142,10 @@ namespace PyramidPanic
             {
                 beetle.Update(gametime);
             }
+            if (this.explorer != null)
+            {
+                this.explorer.Update(gametime);
+            }
         }
         public void draw(GameTime gametime)
         {
@@ -149,6 +169,10 @@ namespace PyramidPanic
             foreach (Image image in this.treasures)
             {
                 image.Draw(gametime);
+            }
+            if (this.explorer != null)
+            {
+                this.explorer.Draw(gametime);
             }
             
             
