@@ -81,6 +81,7 @@ namespace PyramidPanic
             }
             BeetleManager.Level = this;
             ScorpionManager.Level = this;
+            ExplorerManager.Level = this;
             
            
             
@@ -90,13 +91,13 @@ namespace PyramidPanic
             switch (blockElement)
             {
                 case 'B':
-                    this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
+                    this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 5.0f));
                     return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'b');
                 case 'E':
-                   this.explorer = new Explorer(this.game,new Vector2(x,y),2.0f);
+                   this.explorer = new Explorer(this.game,new Vector2(x,y),2.5f);
                     return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'E');
                 case 'S':
-                    this.scorpionList.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
+                    this.scorpionList.Add(new Scorpion(this.game, new Vector2(x, y), 5.0f));
  	                 return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 's');
 
                 case 'q':

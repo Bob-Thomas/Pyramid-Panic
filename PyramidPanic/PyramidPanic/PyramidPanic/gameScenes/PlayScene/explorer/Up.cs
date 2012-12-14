@@ -41,7 +41,15 @@ namespace PyramidPanic
         {
             base.Update(gameTime);
             this.explorer.Position += new Vector2(0,-this.explorer.Speed);
-
+            if (ExplorerManager.CollisionDetectionWalls())
+            {
+                int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
+                this.explorer.Position = new Vector2(this.explorer.Position.X,(geheelAantalmalen32 * 32)+ 1 * 32);
+                if (Input.DetectKeyUp(Keys.W))
+                {
+                    this.explorer.State = new Idle(this.explorer, 0f);
+                }
+            }
             if (Input.DetectKeyUp(Keys.W))
             {
                 float modulo = this.explorer.Position.Y % 32;

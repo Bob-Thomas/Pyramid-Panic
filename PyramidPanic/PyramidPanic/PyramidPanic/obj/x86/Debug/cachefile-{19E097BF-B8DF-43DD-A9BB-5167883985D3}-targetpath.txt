@@ -53,5 +53,6 @@ Content\PlaySceneAssets\Enemy's\Mummy.xnb
 Content\PlaySceneAssets\Enemy's\Beetle.xnb
 Content\fonts\font.xnb
 Content\PlaySceneAssets\Player\Explorer.xnb
+Content\PlaySceneAssets\Player\blokje.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\1.txt

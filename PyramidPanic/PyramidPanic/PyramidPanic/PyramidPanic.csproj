@@ -117,6 +117,7 @@
     <Compile Include="gameScenes\PlayScene\AnimatedSprite\AnimatedSprite.cs" />
     <Compile Include="gameScenes\PlayScene\AnimatedSprite\IAnimatedSprite.cs" />
     <Compile Include="gameScenes\PlayScene\explorer\Down.cs" />
+    <Compile Include="gameScenes\PlayScene\explorer\ExplorerManager.cs" />
     <Compile Include="gameScenes\PlayScene\explorer\Up.cs" />
     <Compile Include="gameScenes\PlayScene\explorer\Left.cs" />
     <Compile Include="gameScenes\PlayScene\explorer\Idle.cs" />

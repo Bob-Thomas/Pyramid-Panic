@@ -17,8 +17,8 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Vector2 position;
-        private Texture2D texture;
-        private Rectangle rectangle;
+        private Texture2D texture, CollisionText;
+        private Rectangle rectangle, CollisionRect;
 
 
         AnimatedSprite state;
@@ -47,6 +47,10 @@ namespace PyramidPanic
         {
             get { return this.rectangle; }
         }
+        public Rectangle CollisionRectangle
+        {
+            get { return this.CollisionRect; }
+        }
         public Texture2D Texture
         {
             get { return this.texture; }
@@ -62,8 +66,10 @@ namespace PyramidPanic
             this.initialize();
             this.game = game;
             this.texture = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Player\Explorer");
+            this.CollisionText = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Player\blokje");
             this.position = position;
             this.rectangle = new Rectangle((int)this.position.X + 16, (int)this.position.Y + 16, texture.Width/4, texture.Height);
+            this.CollisionRect = new Rectangle((int)this.position.X, (int)this.position.Y, texture.Width/4, texture.Height);
             this.speed = speed;
             this.state = new Idle(this);
         }
@@ -76,12 +82,16 @@ namespace PyramidPanic
         //loadcontent
         public void LoadContent()
         {
+            
         }
 
         //update
         public void Update(GameTime gameTime)
         {
-                this.state.Update(gameTime);
+            ExplorerManager.Explorer = this;
+            this.CollisionRect.X = (int)this.position.X;
+            this.CollisionRect.Y = (int)this.position.Y;
+             this.state.Update(gameTime);
         }
 
         //draw
