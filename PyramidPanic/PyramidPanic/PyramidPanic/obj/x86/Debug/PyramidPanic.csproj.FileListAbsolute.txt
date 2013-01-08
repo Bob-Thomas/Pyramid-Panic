@@ -124,3 +124,4 @@ C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school pro
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.pdb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Player\Explorer.xnb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Player\blokje.xnb
+C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\3.txt

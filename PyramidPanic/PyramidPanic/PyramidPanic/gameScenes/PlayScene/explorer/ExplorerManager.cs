@@ -35,7 +35,7 @@ namespace PyramidPanic
                     {
                         if (explorer.CollisionRectangle.Intersects(level.Tiles[i, j].Rectangle))
                         {
-                            return true;
+                            return true;    
                         }
                     }
                 }
@@ -43,8 +43,69 @@ namespace PyramidPanic
             }
             return false;
         }
+
+
+        public static void CollisionDetectPickups()
+        {
+            foreach (Treasure treasure in level.Treasures)
+            {
+                if (explorer.CollisionRectangle.Intersects(treasure.Rectangle))
+                {
+                    switch (treasure.Character)
+                    {
+                            // ankh = 10 cat = 100 scarab = 50 + scarab = potion = 0
+                        case 'a': Score.Points += 50;
+                                  Score.ScarabAmount += 1;
+                            break;
+
+                        case 'b': Score.Lives +=1;
+                            break;
+                        case 'c': Score.Points += 100;
+                            break;
+                        case 'd': Score.Points += 10;
+                            break;
+
+                    }
+                    
+                    level.Treasures.Remove(treasure);
+                    break;
+                }
+                }
+
+            }
+
+        public static void CollisionDetectScorpions()
+        {
+            foreach (Scorpion scorpion in level.ScorpionList)
+            {
+                if(explorer.CollisionRectangle.Intersects(scorpion.ColRect))
+                {
+                    level.ScorpionList.Remove(scorpion);
+                    Score.Lives -= 1;
+                    break;
+                }
+               
+ 
+            }
+
+        }
+        public static void CollisionDetectBeetles()
+        {
+            foreach (Beetle beetle in level.BeetleList)
+            {
+                if (explorer.CollisionRectangle.Intersects(beetle.ColRect))
+                {
+                    level.BeetleList.Remove(beetle);
+                    Score.Lives -= 1;
+                    break;
+                }
+               
+            }
+
+        }
+           
+        }
         
 
 
     }
-}

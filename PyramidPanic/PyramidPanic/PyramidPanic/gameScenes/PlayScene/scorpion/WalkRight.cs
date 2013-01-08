@@ -27,7 +27,7 @@ namespace PyramidPanic
             this.scorpion.Position += new Vector2(this.scorpion.Speed, 0f);
             if (this.scorpion.Position.X > scorpion.Right)
             {
-                this.scorpion.State = new WalkLeft(this.scorpion);
+                this.scorpion.State = this.scorpion.WalkLeft;
             }
             //Dit is de code voor de animatie van de sprite
             base.Update(gameTime);

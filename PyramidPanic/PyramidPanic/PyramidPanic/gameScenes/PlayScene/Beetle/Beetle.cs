@@ -18,13 +18,26 @@ namespace PyramidPanic
         private Texture2D texture;
         private Vector2 position;
         private Rectangle rectangle;
+        private Rectangle colRect;
         private IBeetle state;
         private float speed;
         private float top;
         private float bottom;
+        private WalkUP walkUp;
+        private WalkDown walkDown;
 
 
         //Properties
+        public WalkDown WalkDown
+        {
+            get { return this.walkDown; }
+        }
+
+        public WalkUP WalkUp
+        {
+            get { return this.walkUp; }
+        }
+
         public float Top
         {
 
@@ -49,9 +62,15 @@ namespace PyramidPanic
                 this.position = value;
                 this.rectangle.X = (int)this.position.X + 16;
                 this.rectangle.Y = (int)this.position.Y + 16;
+                this.colRect.Y = (int)this.position.Y;
+                this.colRect.X = (int)this.position.X;
             }
         }
 
+        public Rectangle ColRect
+        {
+            get { return this.colRect; }
+        }
         public PyramidPanic Game
         {
             get { return this.game; }
@@ -82,6 +101,9 @@ namespace PyramidPanic
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
+            this.colRect = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
+            this.walkDown = new WalkDown(this);
+            this.walkUp = new WalkUP(this);
             this.state = new WalkUP(this);
         }
 

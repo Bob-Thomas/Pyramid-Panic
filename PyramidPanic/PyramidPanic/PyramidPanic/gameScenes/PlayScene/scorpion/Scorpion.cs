@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿    ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -16,12 +16,15 @@ namespace PyramidPanic
         //Field
         private PyramidPanic game;
         private Texture2D texture;
+        private Texture2D collisionText;
         private Vector2 position;
         private Rectangle rectangle;
         private IScorpion state;
+        private Rectangle colRect;
         private float speed;
-        private float left;
-        private float right;
+        private float right, left;
+        private WalkLeft walkLeft;
+        private WalkRight walkRight;
 
 
         //Properties
@@ -49,6 +52,8 @@ namespace PyramidPanic
                 this.position = value;
                 this.rectangle.X = (int)this.position.X + 16;
                 this.rectangle.Y = (int)this.position.Y + 16;
+                this.colRect.X = (int)this.position.X;
+                this.colRect.Y = (int)this.position.Y;
             }
         }
 
@@ -67,22 +72,40 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
+        public Rectangle ColRect
+        {
+            get { return this.colRect; }
+        }
+
         public IScorpion State
         {
             get { return this.state; }
             set { this.state = value; }
         }
 
+        public WalkLeft WalkLeft
+        {
+            get { return this.walkLeft; }
+        }
+
+        public WalkRight WalkRight
+        {
+            get { return this.walkRight; }
+        }
 
         //De constructor
         public Scorpion(PyramidPanic game, Vector2 position, float speed)
         {
             this.game = game;
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Enemy's\Scorpion");
+            this.collisionText = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Player\blokje");
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
-            this.state = new WalkRight(this);
+            this.colRect = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
+            this.walkLeft = new WalkLeft(this);
+            this.walkRight = new WalkRight(this);
+            this.state = this.walkRight;
         }
 
         //Update
@@ -94,6 +117,7 @@ namespace PyramidPanic
         //Draw methode
         public void Draw(GameTime gameTime)
         {
+            this.game.SpriteBatch.Draw(this.collisionText, this.ColRect,null, Color.Red, 0f, Vector2.Zero, SpriteEffects.None, 1f);
             this.state.Draw(gameTime);
         }
     }

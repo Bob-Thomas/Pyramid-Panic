@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 namespace PyramidPanic
 {
     public enum TileCollision { Passable, Notpassable }
-    public class Tile
+    public class Tile   
     {
         private PyramidPanic game;
         private Texture2D texture;

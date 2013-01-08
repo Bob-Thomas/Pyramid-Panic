@@ -39,28 +39,33 @@ namespace PyramidPanic
         //update
         public override void Update(GameTime gameTime)
         {
-            base.Update(gameTime);
-            this.explorer.Position += new Vector2(0,-this.explorer.Speed);
+            this.explorer.Position -= new Vector2(0f, this.explorer.Speed);
+            //Collision detection met NotPassable objects
             if (ExplorerManager.CollisionDetectionWalls())
             {
                 int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
-                this.explorer.Position = new Vector2(this.explorer.Position.X,(geheelAantalmalen32 * 32)+ 1 * 32);
-                if (Input.DetectKeyUp(Keys.W))
+                this.explorer.Position = new Vector2(this.explorer.Position.X, (geheelAantalmalen32 + 1) * 32);
+                if (Input.DetectKeyUp(Keys.Up))
                 {
-                    this.explorer.State = new Idle(this.explorer, 0f);
+                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI / 2);
                 }
             }
+            //Blijf op het grid            
             if (Input.DetectKeyUp(Keys.W))
             {
-                float modulo = this.explorer.Position.Y % 32;
-                if (modulo >= 32f - this.explorer.Speed)
+                float modulo = (this.explorer.Position.Y >= 0) ?
+                                this.explorer.Position.Y % 32 :
+                                32 + this.explorer.Position.Y;
+                if (modulo <= this.explorer.Speed)
                 {
                     int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
-                    this.explorer.Position = new Vector2(this.explorer.Position.X,(geheelAantalmalen32 * 32) + 1 * 32);
-                    this.explorer.State = new Idle(this.explorer, this.angle);
+                    this.explorer.Position = (this.explorer.Position.Y >= 0) ?
+                                              new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32) :
+                                              new Vector2(this.explorer.Position.X, (geheelAantalmalen32 - 1) * 32);
+                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI / 2);
                 }
             }
-            
+            base.Update(gameTime);
         }
 
         //draw

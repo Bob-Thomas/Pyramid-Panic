@@ -45,19 +45,21 @@ namespace PyramidPanic
             if (ExplorerManager.CollisionDetectionWalls())
             {
                 int geheelAantalmalen32 = (int)this.explorer.Position.X / 32;
-                this.explorer.Position = new Vector2((geheelAantalmalen32 * 32)+ 1 * 32, this.explorer.Position.Y);
+                this.explorer.Position =(this.explorer.Position.X >= 0) ?  new Vector2((geheelAantalmalen32 * 32)+ 1 * 32, this.explorer.Position.Y):
+                                                                            new Vector2(geheelAantalmalen32  * 32, this.explorer.Position.Y);
                 if (Input.DetectKeyUp(Keys.A))
                 {
-                    this.explorer.State = new Idle(this.explorer, 0f);
+                    this.explorer.State = new Idle(this.explorer, this.angle);
                 }
             }
             if (Input.DetectKeyUp(Keys.A))
             {
                 float modulo = this.explorer.Position.X % 32;
-                if (modulo >= 32 - this.explorer.Speed)
+                if (modulo <= this.explorer.Speed)
                 {
                     int geheelAantalmalen32 = (int)this.explorer.Position.X / 32;
-                    this.explorer.Position = new Vector2((geheelAantalmalen32 * 32) + 1 * 32, this.explorer.Position.Y);
+                    this.explorer.Position = (this.explorer.Position.X >= 0)?new Vector2(geheelAantalmalen32 * 32, this.explorer.Position.Y):
+                                                                            new Vector2((geheelAantalmalen32 -1) * 32, this.explorer.Position.Y);
                     this.explorer.State = new Idle(this.explorer, this.angle);
                 }
             }

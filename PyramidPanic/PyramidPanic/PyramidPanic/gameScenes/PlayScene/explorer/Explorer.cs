@@ -37,6 +37,8 @@ namespace PyramidPanic
                 this.position = value;
                 this.rectangle.X = (int)this.position.X + 16;
                 this.rectangle.Y = (int)this.position.Y + 16;
+                this.CollisionRect.X = (int)this.position.X;
+                this.CollisionRect.Y = (int)this.position.Y;
                 }
         }
         public PyramidPanic Game
@@ -89,15 +91,16 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             ExplorerManager.Explorer = this;
-            this.CollisionRect.X = (int)this.position.X;
-            this.CollisionRect.Y = (int)this.position.Y;
+            ExplorerManager.CollisionDetectPickups();
+            ExplorerManager.CollisionDetectScorpions();
+            ExplorerManager.CollisionDetectBeetles();
+            Score.maxAmount();
              this.state.Update(gameTime);
         }
 
         //draw
         public void Draw(GameTime gameTime)
         {
-            //this.game.SpriteBatch.Draw(this.texture, this.rectangle, new Rectangle(this.xValue[this.i], 0, 32, 32),Color.White,0f,Vector2.Zero,SpriteEffects.None,1f);
             this.state.Draw(gameTime);
         }
 

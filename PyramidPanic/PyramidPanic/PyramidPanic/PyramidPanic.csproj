@@ -110,42 +110,104 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gameScenes\PlayScene\Beetle\BeetleManager.cs" />
-    <Compile Include="gameScenes\HelpScene\HelpScene.cs" />
-    <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs" />
-    <Compile Include="gameScenes\LoadScene\LoadScene.cs" />
-    <Compile Include="gameScenes\PlayScene\AnimatedSprite\AnimatedSprite.cs" />
-    <Compile Include="gameScenes\PlayScene\AnimatedSprite\IAnimatedSprite.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\Down.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\ExplorerManager.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\Up.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\Left.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\Idle.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\Explorer.cs" />
-    <Compile Include="gameScenes\PlayScene\explorer\Right.cs" />
-    <Compile Include="gameScenes\PlayScene\scorpion\ScorpionManager.cs" />
-    <Compile Include="gameScenes\PlayScene\Beetle\IBeetle.cs" />
-    <Compile Include="gameScenes\PlayScene\Beetle\Beetle.cs" />
-    <Compile Include="gameScenes\PlayScene\Beetle\WalkUP.cs" />
-    <Compile Include="gameScenes\PlayScene\Beetle\WalkDown.cs" />
-    <Compile Include="gameScenes\PlayScene\scorpion\Iscorpion.cs" />
-    <Compile Include="gameScenes\PlayScene\Level.cs" />
-    <Compile Include="gameScenes\PlayScene\Panel\Panel.cs" />
-    <Compile Include="gameScenes\PlayScene\scorpion\Scorpion.cs" />
-    <Compile Include="gameScenes\PlayScene\scorpion\WalkLeft.cs" />
-    <Compile Include="gameScenes\PlayScene\scorpion\WalkRight.cs" />
-    <Compile Include="gameScenes\PlayScene\tiles\Tile.cs" />
-    <Compile Include="gameScenes\QuitScene\QuitScene.cs" />
-    <Compile Include="gameScenes\ScoreScene\ScoreScene.cs" />
+    <Compile Include="gameScenes\HelpScene\HelpScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\LoadScene\LoadScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\AnimatedSprite\AnimatedSprite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\AnimatedSprite\IAnimatedSprite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Beetle\Beetle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Beetle\BeetleManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Beetle\IBeetle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Beetle\WalkDown.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Beetle\WalkUP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\Down.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\Explorer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\ExplorerManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\Idle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\Left.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\Right.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\explorer\Up.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Level.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\Panel\Panel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\PlayScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\score\Score.cs" />
+    <Compile Include="gameScenes\PlayScene\scorpion\Iscorpion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\scorpion\Scorpion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\scorpion\ScorpionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\scorpion\WalkLeft.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\scorpion\WalkRight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\tiles\Tile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\PlayScene\treasures\Treasure.cs" />
+    <Compile Include="gameScenes\QuitScene\QuitScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\ScoreScene\ScoreScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\StartScene\MenuStartScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="gameScenes\StartScene\StartScene.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="HelperClasses\Image.cs" />
-    <Compile Include="gameScenes\StartScene\MenuStartScene.cs" />
     <Compile Include="input\Input.cs" />
-    <Compile Include="gameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="IStateGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="game\Program.cs" />
     <Compile Include="game\PyramidPanic.cs" />
-    <Compile Include="gameScenes\StartScene\StartScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

@@ -40,6 +40,11 @@ namespace PyramidPanic
         {
             get { return this.tiles;  }
         }
+        public List<Image> Treasures
+        {
+            get { return this.treasures; }
+            set { this.treasures = value; }
+        }
         
 
 
@@ -49,6 +54,7 @@ namespace PyramidPanic
             this.game = game;
             this.levelPath = @"Content\PlaySceneAssets\Levels\"+levelIndex+".txt";
             this.loadAssets();
+            Score.initialize();
         }
         private void loadAssets()
         {
@@ -91,27 +97,27 @@ namespace PyramidPanic
             switch (blockElement)
             {
                 case 'B':
-                    this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 5.0f));
+                    this.beetleList.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'b');
                 case 'E':
                    this.explorer = new Explorer(this.game,new Vector2(x,y),2.5f);
                     return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 'E');
                 case 'S':
-                    this.scorpionList.Add(new Scorpion(this.game, new Vector2(x, y), 5.0f));
+                    this.scorpionList.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
  	                 return new Tile(this.game, @"Transparant", new Vector2(x, y), TileCollision.Passable, 's');
 
-                case 'q':
-                    this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Scarab"));
-                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'q');
-                case 'p':
-                    this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Potion"));
-                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'p');
-                case 'c':
-                    this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Treasure2"));
-                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'c');
                 case 'a':
-                    this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Treasure1"));
+                    this.treasures.Add(new Treasure('a',this.game, new Vector2(x, y),@"PlaySceneAssets\pickups\Scarab"));//scarab
                     return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'a');
+                case 'b':
+                    this.treasures.Add(new Treasure('b',this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Potion"));//potions
+                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'b');
+                case 'c':
+                    this.treasures.Add(new Treasure('c',this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Treasure2"));//cat
+                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'c');
+                case 'd':
+                    this.treasures.Add(new Treasure('d',this.game, new Vector2(x, y), @"PlaySceneAssets\pickups\Treasure1"));//ankh
+                    return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, 'd');
                 case '@':
                     this.background = new Image(this.game, new Vector2(x,y),@"PlaySceneAssets\background\Background2");
                     return new Tile(this.game, @"Wall2", new Vector2(x, y), TileCollision.Notpassable, '@');
@@ -124,9 +130,8 @@ namespace PyramidPanic
                     return new Tile(this.game,@"Block",new Vector2(x,y),TileCollision.Notpassable,'w');
                 case '.':
                         return new Tile(this.game,@"transparant", new Vector2(x,y),TileCollision.Passable,'.');
-                case 'd':
-                        this.treasures.Add(new Image(this.game, new Vector2(x, y), @"PlaySceneAssets\tiles\Door"));
-                        return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Notpassable, 'd');
+                case 'D':
+                        return new Tile(this.game, @"Door", new Vector2(x, y), TileCollision.Passable, 'd');
                 default:
                     return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, '.');
                     
@@ -147,6 +152,7 @@ namespace PyramidPanic
             {
                 this.explorer.Update(gametime);
             }
+            panel.update(gametime);
         }
         public void draw(GameTime gametime)
         {
