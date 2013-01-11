@@ -22,7 +22,7 @@ namespace PyramidPanic
         public Right(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
-            this.angle = 0f;
+            this.angle = this.angle = -(float)Math.PI * 2;
             this.i = 0;
         }
         //initialize
@@ -59,7 +59,7 @@ namespace PyramidPanic
                     int geheelAantalmalen32 = (int)this.explorer.Position.X / 32;
                     this.explorer.Position = (this.explorer.Position.X >= 0) ? new Vector2((geheelAantalmalen32 +1) * 32, this.explorer.Position.Y):
                                                                                 new Vector2(geheelAantalmalen32 * 32,this.explorer.Position.Y);
-                    this.explorer.State = new Idle(this.explorer, (float) Math.PI/2);
+                    this.explorer.State = new Idle(this.explorer,this.angle);
                 }
             }
             base.Update(gameTime);

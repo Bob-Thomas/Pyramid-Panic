@@ -35,25 +35,25 @@ namespace PyramidPanic
         public void LoadContent()
         {
         }
-
+            
         //update
         public override void Update(GameTime gameTime)
         {
-            this.explorer.Position -= new Vector2(0f, this.explorer.Speed);
+             this.explorer.Position -= new Vector2(0f, this.explorer.Speed);
             //Collision detection met NotPassable objects
             if (ExplorerManager.CollisionDetectionWalls())
             {
                 int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
-                this.explorer.Position = new Vector2(this.explorer.Position.X, (geheelAantalmalen32 + 1) * 32);
+                this.explorer.Position = new Vector2(this.explorer.Position.X, (geheelAantalmalen32 + 1) * 32 );
                 if (Input.DetectKeyUp(Keys.Up))
                 {
-                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI / 2);
+                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI/2);
                 }
             }
             //Blijf op het grid            
-            if (Input.DetectKeyUp(Keys.W))
+            if (Input.DetectKeyUp(Keys.Up))
             {
-                float modulo = (this.explorer.Position.Y >= 0) ?
+                float modulo = (this.explorer.Position.Y >=0) ? 
                                 this.explorer.Position.Y % 32 :
                                 32 + this.explorer.Position.Y;
                 if (modulo <= this.explorer.Speed)
@@ -62,7 +62,7 @@ namespace PyramidPanic
                     this.explorer.Position = (this.explorer.Position.Y >= 0) ?
                                               new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32) :
                                               new Vector2(this.explorer.Position.X, (geheelAantalmalen32 - 1) * 32);
-                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI / 2);
+                    this.explorer.State = new Idle(this.explorer, -(float)Math.PI/2);
                 }
             }
             base.Update(gameTime);

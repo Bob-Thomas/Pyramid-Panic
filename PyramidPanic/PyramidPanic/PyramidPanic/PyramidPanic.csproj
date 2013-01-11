@@ -161,9 +161,12 @@
     <Compile Include="gameScenes\PlayScene\explorer\Up.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="gameScenes\PlayScene\Level.cs">
+    <Compile Include="gameScenes\PlayScene\Level\LevelPause.cs" />
+    <Compile Include="gameScenes\PlayScene\Level\ILevel.cs" />
+    <Compile Include="gameScenes\PlayScene\Level\Level.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="gameScenes\PlayScene\Level\LevelPlay.cs" />
     <Compile Include="gameScenes\PlayScene\Panel\Panel.cs">
       <SubType>Code</SubType>
     </Compile>

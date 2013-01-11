@@ -17,6 +17,7 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Vector2 position;
+        private Vector2 startpos;
         private Texture2D texture, CollisionText;
         private Rectangle rectangle, CollisionRect;
 
@@ -40,6 +41,11 @@ namespace PyramidPanic
                 this.CollisionRect.X = (int)this.position.X;
                 this.CollisionRect.Y = (int)this.position.Y;
                 }
+        }
+
+        public Vector2 StartPos
+        {
+            get { return this.startpos; }
         }
         public PyramidPanic Game
         {
@@ -67,6 +73,7 @@ namespace PyramidPanic
         {
             this.initialize();
             this.game = game;
+            this.startpos = position;
             this.texture = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Player\Explorer");
             this.CollisionText = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Player\blokje");
             this.position = position;

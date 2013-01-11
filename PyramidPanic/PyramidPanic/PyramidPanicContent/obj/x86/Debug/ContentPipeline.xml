@@ -440,7 +440,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\pushable\Block_hor.xnb</Output>
-      <Time>2012-11-24T11:17:54.9938636+01:00</Time>
+      <Time>2013-01-08T12:59:35.0500271+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\pushable\Block_vert.png</Source>
@@ -449,7 +449,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\pushable\Block_vert.xnb</Output>
-      <Time>2012-11-24T11:17:55.0168649+01:00</Time>
+      <Time>2013-01-08T12:59:35.0710283+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Enemy's\Scorpion.png</Source>
@@ -458,7 +458,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Enemy's\Scorpion.xnb</Output>
-      <Time>2012-11-24T11:23:15.9332203+01:00</Time>
+      <Time>2013-01-08T12:59:35.0170252+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Enemy's\Mummy.png</Source>
@@ -467,7 +467,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Enemy's\Mummy.xnb</Output>
-      <Time>2012-11-24T11:23:15.9452209+01:00</Time>
+      <Time>2013-01-08T12:59:34.9890236+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Enemy's\Beetle.png</Source>
@@ -476,7 +476,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Enemy's\Beetle.xnb</Output>
-      <Time>2012-11-24T11:23:15.9622219+01:00</Time>
+      <Time>2013-01-08T12:59:34.9800231+01:00</Time>
     </Item>
     <Item>
       <Source>fonts\font.spritefont</Source>
@@ -494,7 +494,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Player\Explorer.xnb</Output>
-      <Time>2012-12-07T10:40:59.7868675+01:00</Time>
+      <Time>2013-01-08T12:59:35.0330261+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\Player\blokje.png</Source>
@@ -503,7 +503,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Player\blokje.xnb</Output>
-      <Time>2012-12-14T10:10:20.4639928+01:00</Time>
+      <Time>2013-01-08T12:59:35.0350262+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\overlay\overlay.png</Source>
+      <Name>PlaySceneAssets\overlay\overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\overlay.xnb</Output>
+      <Time>2013-01-11T08:59:19.0728625+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
