@@ -16,7 +16,13 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Level level;
-        private int levelNumber = 7;
+        private static int levelNumber;
+
+        public static int LevelNumber
+        {
+            get { return levelNumber; }
+            set { levelNumber = value; }
+        }
         //constructor
         public PlayScene(PyramidPanic game)
         {
@@ -32,12 +38,20 @@ namespace PyramidPanic
         //load content
         public void Loadcontent()
         {
-            this.level = new Level(this.game, this.levelNumber);
+            this.level = new Level(this.game, levelNumber);
         }
 
         //update
         public void update(GameTime gameTime)
         {
+            if (Score.isDead())
+            {
+                this.level.LevelState = level.LevelGameOver;
+            }
+            if (ExplorerManager.WalkOutOfLevel())
+            {
+                level.LevelState = level.LevelNextLevel;
+            }
             this.level.update(gameTime);
         }
         //draw

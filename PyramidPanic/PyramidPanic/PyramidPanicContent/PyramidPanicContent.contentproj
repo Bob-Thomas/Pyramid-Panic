@@ -189,8 +189,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="images\overlay.png">
-      <Name>overlay</Name>
+    <Compile Include="PlaySceneAssets\overlay\GameOver.png">
+      <Name>GameOver</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -392,10 +392,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PlaySceneAssets\Levels\7.txt">
-      <Name>7</Name>
+    <None Include="PlaySceneAssets\Levels\5.txt">
+      <Name>5</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\overlay\overlayDoorsAreOpen.png">
+      <Name>overlayDoorsAreOpen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

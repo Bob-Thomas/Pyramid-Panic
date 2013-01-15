@@ -29,6 +29,11 @@ namespace PyramidPanic
         public TileCollision TileCollision
         {
             get { return this.tileCollision;  }
+            set { this.tileCollision = value; }
+        }
+        public char CharItem
+        {
+            get { return this.charItem; }
         }
         
         public Tile(PyramidPanic game,string tileName

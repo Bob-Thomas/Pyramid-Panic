@@ -5,10 +5,10 @@ w..................x
 x..................x
 waaaaaaaaaaaaaaaaaaw
 x.....E............x
-w..................w
+w..................D
 xccccccccccccccccccx
-w..................w
-d.................dw
-w..................w
+w.................Ew
+dccccccccccccccccccw
+wccccccccccccccccccw
 xddddddddddddddddddx
 wxyxwxwywxwywxwywxwx

@@ -29,8 +29,19 @@ namespace PyramidPanic
         private const int GRIDHEIGHT = 32;
         private LevelPause levelPause;
         private LevelPlay levelPlay;
+        private LevelGameOver levelGameOver;
+        private LevelOpenDoor levelOpenDoor;
+        private LevelNextLevel levelNextLevel;
         private ILevel levelState;
 
+        public LevelGameOver LevelGameOver
+        {
+            get { return this.levelGameOver; }
+        }
+        public LevelNextLevel LevelNextLevel
+        {
+            get { return this.levelNextLevel; }
+        }
         public List<Beetle> BeetleList
         {
             get { return this.beetleList; }
@@ -70,7 +81,12 @@ namespace PyramidPanic
             get { return this.levelPlay; }
             set { this.levelPlay = value; }
         }
-        
+
+        public LevelOpenDoor LevelOpenDoor
+        {
+            get { return this.levelOpenDoor; }
+            set { this.levelOpenDoor = value; }
+        }
 
 
         //construction
@@ -81,7 +97,11 @@ namespace PyramidPanic
             this.loadAssets();
             this.levelPlay = new LevelPlay(this);
             this.levelPause = new LevelPause(this);
+            this.levelOpenDoor = new LevelOpenDoor(this);
+            this.levelGameOver = new LevelGameOver(this);
+            this.levelNextLevel = new LevelNextLevel(this);
             this.levelState = new LevelPlay(this);
+            Score.Level = this;
             Score.initialize();
         }
         private void loadAssets()
@@ -116,6 +136,7 @@ namespace PyramidPanic
             BeetleManager.Level = this;
             ScorpionManager.Level = this;
             ExplorerManager.Level = this;
+            ExplorerManager.Explorer = this.explorer;
             
            
             
@@ -159,7 +180,7 @@ namespace PyramidPanic
                 case '.':
                         return new Tile(this.game,@"transparant", new Vector2(x,y),TileCollision.Passable,'.');
                 case 'D':
-                        return new Tile(this.game, @"Door", new Vector2(x, y), TileCollision.Passable, 'd');
+                        return new Tile(this.game, @"Door", new Vector2(x, y), TileCollision.Notpassable, 'D');
                 default:
                     return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, '.');
                     

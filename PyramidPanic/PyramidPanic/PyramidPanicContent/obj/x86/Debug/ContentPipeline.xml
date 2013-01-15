@@ -263,15 +263,6 @@
       <Time>2012-02-02T16:37:40+01:00</Time>
     </Item>
     <Item>
-      <Source>images\overlay.png</Source>
-      <Name>images\overlay</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\overlay.xnb</Output>
-      <Time>2012-04-19T15:43:56+02:00</Time>
-    </Item>
-    <Item>
       <Source>images\Panel.png</Source>
       <Name>images\Panel</Name>
       <Importer>TextureImporter</Importer>
@@ -513,6 +504,24 @@
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\overlay.xnb</Output>
       <Time>2013-01-11T08:59:19.0728625+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\overlay\overlayDoorsAreOpen.png</Source>
+      <Name>PlaySceneAssets\overlay\overlayDoorsAreOpen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\overlayDoorsAreOpen.xnb</Output>
+      <Time>2013-01-15T09:16:36.4092676+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\overlay\GameOver.png</Source>
+      <Name>PlaySceneAssets\overlay\GameOver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\GameOver.xnb</Output>
+      <Time>2012-04-19T15:43:56+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

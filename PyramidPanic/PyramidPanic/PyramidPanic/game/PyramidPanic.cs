@@ -50,7 +50,7 @@ namespace PyramidPanic
 
         protected override void LoadContent()
         {
-
+            PlayScene.LevelNumber = 0;
             this.spriteBatch = new SpriteBatch(GraphicsDevice);
             this.gameState = new StartScene(this);
 

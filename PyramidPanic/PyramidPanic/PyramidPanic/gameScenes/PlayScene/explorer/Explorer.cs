@@ -101,7 +101,6 @@ namespace PyramidPanic
             ExplorerManager.CollisionDetectPickups();
             ExplorerManager.CollisionDetectScorpions();
             ExplorerManager.CollisionDetectBeetles();
-            Score.maxAmount();
              this.state.Update(gameTime);
         }
 

@@ -13,11 +13,28 @@ namespace PyramidPanic
 {
     public class Score
     {
+        private static int lives = 3;
         private static int points;
         private static int scarabAmount;
-        private static int lives;
+        private static bool doorsAreClosed;
+        private static Level level;
+        private static int maxPointDoors = 0;
 
+        public static int MaxPointDoors
+        {
+            set {  maxPointDoors = value; }
+        }
+        public static Level Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
 
+        public static bool DoorsAreClosed
+        {
+            get { return doorsAreClosed; }
+            set { doorsAreClosed = value; }
+        }
         public static int Points
         {
             get { return points; }
@@ -39,19 +56,48 @@ namespace PyramidPanic
 
         public static void initialize()
         {
-            points = 0;
-            scarabAmount = 0;
-            lives = 3;
+            doorsAreClosed = true;
+            maxScoreLevel();
 
         }
-        public static void maxAmount()
+
+        public static void maxScoreLevel()
         {
-            if (lives <= 0)
+            foreach (Treasure treasure in level.Treasures)
             {
-                lives = 0;
+                switch (treasure.Character)
+                {
+                    case 'a':
+                        maxPointDoors += 50;
+                        break;
+                    case 'b':
+                        maxPointDoors += 0;
+                        break;
+                    case 'c':
+                        maxPointDoors += 100;
+                        break;
+                    case 'd':
+                        maxPointDoors += 10;
+                        break;
+                    default:
+                        break;
+                            
+                }
             }
+            maxPointDoors += points;
+            maxPointDoors -= 200;
+      
+            Console.WriteLine("test" + maxPointDoors);
+        }
+        public static bool openDoors()
+        {
+            return (Score.points >= maxPointDoors) ? true : false;
         }
 
+        public static bool isDead()
+        {
+            return (lives < 1) ? true : false;
+        }
     }
         
 }

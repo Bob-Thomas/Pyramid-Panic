@@ -5,10 +5,10 @@ wS.....S...........x
 x....S.............x
 wS.S...............w
 xhxwxwxwxxxwxwxwxywx
-wB.B.B.B.B.B.B.B.B.w
+wc.c.c.c.c.c.c.c.c.w
 x..................x
 w..................w
 d..................d
 w............E.....w
-x.B.B.B.B.B.B.B.B.Bx
+x.c.c.c.c.c.c.c.c.cx
 wxyxwxwywxwywxwywxwx

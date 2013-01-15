@@ -89,7 +89,6 @@ C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school pro
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\HelpText.xnb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Lives.xnb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Mummy.xnb
-C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\overlay.xnb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Panel.xnb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Potion.xnb
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\images\Scarab.xnb
@@ -128,4 +127,6 @@ C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school pro
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\2.txt
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\4.txt
 C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\overlay.xnb
-C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\7.txt
+C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\overlayDoorsAreOpen.xnb
+C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\GameOver.xnb
+C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\Levels\5.txt

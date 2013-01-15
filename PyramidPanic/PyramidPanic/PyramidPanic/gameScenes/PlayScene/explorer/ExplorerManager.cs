@@ -53,12 +53,12 @@ namespace PyramidPanic
                 {
                     switch (treasure.Character)
                     {
-                            // ankh = 10 cat = 100 scarab = 50 + scarab = potion = 0
+                        // ankh = 10 cat = 100 scarab = 50 + scarab = potion = 0
                         case 'a': Score.Points += 50;
-                                  Score.ScarabAmount += 1;
+                            Score.ScarabAmount += 1;
                             break;
 
-                        case 'b': Score.Lives +=1;
+                        case 'b': Score.Lives += 1;
                             break;
                         case 'c': Score.Points += 100;
                             break;
@@ -66,13 +66,32 @@ namespace PyramidPanic
                             break;
 
                     }
-                    
+                    if (Score.openDoors() && Score.DoorsAreClosed == true)
+                    {
+                        for (int i = 0; i < level.Tiles.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < level.Tiles.GetLength(1); j++)
+                            {
+                                if (level.Tiles[i, j].TileCollision == TileCollision.Notpassable)
+                                {
+                                    if (level.Tiles[i, j].CharItem == 'D')
+                                    {
+                                        level.Tiles[i, j].TileCollision = TileCollision.Passable;
+                                        Score.DoorsAreClosed = false;
+                                        level.LevelState = level.LevelOpenDoor;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+
                     level.Treasures.Remove(treasure);
                     break;
                 }
-                }
-
             }
+        }
 
         public static void CollisionDetectScorpions()
         {
@@ -106,6 +125,18 @@ namespace PyramidPanic
                
             }
 
+        }
+
+        public static bool WalkOutOfLevel()
+        {
+            if (explorer.Position.X > 640)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
            
         }
