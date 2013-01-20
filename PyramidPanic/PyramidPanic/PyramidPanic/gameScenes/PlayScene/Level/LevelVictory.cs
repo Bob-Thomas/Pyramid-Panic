@@ -11,10 +11,10 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class LevelGameOver : ILevel
+    public class LevelVictory : ILevel
     {
         private Level level;
-        private Image overlay;
+        private Image overlay,backGround;
         private int pauseTime = 1;
         private float timer = 0;
         private Texture2D text;
@@ -33,20 +33,20 @@ namespace PyramidPanic
             set { this.index = value; }
         }
 
-        public LevelGameOver(Level level)
+        public LevelVictory(Level level)
         {
             this.level = level;
-            this.text = this.level.Game.Content.Load<Texture2D>(@"PlaySceneAssets/Player/blokje");
-            this.overlay = new Image(this.level.Game, new Vector2(0,0), @"PlaySceneAssets/overlay/GameOver");
+            backGround = new Image(this.level.Game,Vector2.Zero , @"PlaySceneAssets/background/Background2");
+            this.overlay = new Image(this.level.Game, new Vector2(120f, 100f) , @"PlaySceneAssets/overlay/Congratulation");
             rectangle = new Rectangle((int)overlay.Rectangle.X + 290, (int)overlay.Rectangle.Y + 243, overlay.Rectangle.Width / 10, overlay.Rectangle.Height / 15);
         }
         public void Update(GameTime gameTime)
         {
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (Input.MouseRectangle().Intersects(rectangle)&&Input.MouseEdgeDetectPressLeft()|| Input.DetectKeydown(Keys.Enter))
+            if (Input.DetectKeydown(Keys.Enter))
             {
-                PlayScene.LevelNumber = 0;
+                Score.Lives = 3;
                 Score.Points = 0;
                 level.Game.GameState = new StartScene(this.level.Game);
 
@@ -55,7 +55,8 @@ namespace PyramidPanic
 
         public void Draw(GameTime gameTime)
         {
-
+            this.level.Game.GraphicsDevice.Clear(Color.Red);
+            this.backGround.Draw(gameTime);
             this.overlay.Draw(gameTime);
         }
     }

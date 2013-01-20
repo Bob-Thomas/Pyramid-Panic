@@ -32,8 +32,13 @@ namespace PyramidPanic
         private LevelGameOver levelGameOver;
         private LevelOpenDoor levelOpenDoor;
         private LevelNextLevel levelNextLevel;
+        private LevelVictory levelVictory;
         private ILevel levelState;
 
+        public LevelVictory LevelVictory
+        {
+            get { return this.levelVictory; }
+        }
         public LevelGameOver LevelGameOver
         {
             get { return this.levelGameOver; }
@@ -100,6 +105,7 @@ namespace PyramidPanic
             this.levelOpenDoor = new LevelOpenDoor(this);
             this.levelGameOver = new LevelGameOver(this);
             this.levelNextLevel = new LevelNextLevel(this);
+            this.levelVictory = new LevelVictory(this);
             this.levelState = new LevelPlay(this);
             Score.Level = this;
             Score.initialize();

@@ -44,27 +44,21 @@ namespace PyramidPanic
             //Collisiondetection met NotPassable objects
             if (ExplorerManager.CollisionDetectionWalls())
             {
-                int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
-                this.explorer.Position = (this.explorer.Position.Y >= 0) ?
-                    new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32) :
-                    new Vector2(this.explorer.Position.X, (geheelAantalmalen32 - 1) * 32);
-                if (Input.DetectKeyUp(Keys.Down))
+                int geheelAantalmalen32 = ((int)this.explorer.Position.Y / 32);
+                this.explorer.Position = new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32);
+                if (Input.DetectKeyUp(Keys.S))
                 {
                     this.explorer.State = new Idle(this.explorer, (float)Math.PI / 2);
                 }
             }
             //Blijf op het grid
-            if (Input.DetectKeyUp(Keys.Down))
+            if (Input.DetectKeyUp(Keys.S))
             {
-                float modulo = (this.explorer.Position.Y >= 0) ?
-                                this.explorer.Position.Y % 32 :
-                                32 + this.explorer.Position.Y % 32;
-                if (modulo >= (32f - this.explorer.Speed))
+                float module = this.explorer.Position.Y % 32;
+                if (module >= 32 - this.explorer.Speed)
                 {
-                    int geheelAantalmalen32 = (int)this.explorer.Position.Y / 32;
-                    this.explorer.Position = (this.explorer.Position.Y >= 0) ?
-                        new Vector2(this.explorer.Position.X, (geheelAantalmalen32 + 1) * 32) :
-                        new Vector2(this.explorer.Position.X, (geheelAantalmalen32) * 32);
+                    int geheelAantalmalen32 = ((int)this.explorer.Position.Y / 32) + 1;
+                    this.explorer.Position = new Vector2(this.explorer.Position.X, geheelAantalmalen32 * 32);
                     this.explorer.State = new Idle(this.explorer, (float)Math.PI / 2);
                 }
             }

@@ -24,6 +24,7 @@ namespace PyramidPanic
             this.background = new Image(game, Vector2.Zero, "StartMenu//background");
             this.title = new Image(game, new Vector2(100f, 30f), "StartMenu//Title");
             this.menu = new MenuStartScene(this.game);
+            PlayScene.LevelNumber = 0;
         }
         public void initialize()
         {

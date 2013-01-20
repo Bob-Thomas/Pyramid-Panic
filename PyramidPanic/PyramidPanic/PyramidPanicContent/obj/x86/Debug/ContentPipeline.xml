@@ -512,7 +512,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\overlayDoorsAreOpen.xnb</Output>
-      <Time>2013-01-15T09:16:36.4092676+01:00</Time>
+      <Time>2013-01-17T08:36:07.6651704+01:00</Time>
     </Item>
     <Item>
       <Source>PlaySceneAssets\overlay\GameOver.png</Source>
@@ -521,7 +521,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\GameOver.xnb</Output>
-      <Time>2012-04-19T15:43:56+02:00</Time>
+      <Time>2013-01-17T08:36:07.6331686+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\overlay\Congratulation.png</Source>
+      <Name>PlaySceneAssets\overlay\Congratulation</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\Congratulation.xnb</Output>
+      <Time>2013-01-18T21:56:26.9609554+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

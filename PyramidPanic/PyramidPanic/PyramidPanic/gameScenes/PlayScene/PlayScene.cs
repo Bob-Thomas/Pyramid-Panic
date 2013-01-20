@@ -48,10 +48,15 @@ namespace PyramidPanic
             {
                 this.level.LevelState = level.LevelGameOver;
             }
+            if (Score.completed())
+            {
+                level.LevelState = level.LevelVictory;
+            }
             if (ExplorerManager.WalkOutOfLevel())
             {
                 level.LevelState = level.LevelNextLevel;
             }
+           
             this.level.update(gameTime);
         }
         //draw

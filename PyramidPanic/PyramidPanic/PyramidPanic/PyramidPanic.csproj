@@ -161,6 +161,7 @@
     <Compile Include="gameScenes\PlayScene\explorer\Up.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="gameScenes\PlayScene\Level\LevelVictory.cs" />
     <Compile Include="gameScenes\PlayScene\Level\LevelNextLevel.cs" />
     <Compile Include="gameScenes\PlayScene\Level\LevelGameOver.cs" />
     <Compile Include="gameScenes\PlayScene\Level\LevelOpenDoor.cs" />

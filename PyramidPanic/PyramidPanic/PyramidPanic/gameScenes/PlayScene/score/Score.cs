@@ -57,6 +57,9 @@ namespace PyramidPanic
         public static void initialize()
         {
             doorsAreClosed = true;
+            lives = 3;
+            scarabAmount = 0;
+            maxPointDoors = 0;
             maxScoreLevel();
 
         }
@@ -97,6 +100,11 @@ namespace PyramidPanic
         public static bool isDead()
         {
             return (lives < 1) ? true : false;
+        }
+
+        public static bool completed()
+        {
+            return (PlayScene.LevelNumber > 0) ? true : false;
         }
     }
         
