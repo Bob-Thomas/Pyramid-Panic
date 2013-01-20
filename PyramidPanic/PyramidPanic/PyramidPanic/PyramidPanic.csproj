@@ -113,6 +113,7 @@
     <Compile Include="gameScenes\HelpScene\HelpScene.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="gameScenes\IState.cs" />
     <Compile Include="gameScenes\LevelEditorScene\LevelEditorScene.cs">
       <SubType>Code</SubType>
     </Compile>

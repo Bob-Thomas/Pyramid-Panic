@@ -17,7 +17,6 @@ namespace PyramidPanic
         private Image overlay,backGround;
         private int pauseTime = 1;
         private float timer = 0;
-        private Texture2D text;
         private Rectangle rectangle;
         private int index = -1;
         private string removeType;

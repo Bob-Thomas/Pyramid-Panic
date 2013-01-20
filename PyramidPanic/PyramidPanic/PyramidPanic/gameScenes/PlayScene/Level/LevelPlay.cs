@@ -33,6 +33,11 @@ namespace PyramidPanic
             {
                 this.level.Explorer.Update(gameTime);
             }
+            /*MovingBlockManager.Explorer = this.level.Explorer;
+            foreach (MovingBlock block in this.level.MovingBlocks)
+            {
+                block.Update(gameTime, this.level.Explorer);
+            }*/
         }
 
         public void Draw(GameTime gameTime)

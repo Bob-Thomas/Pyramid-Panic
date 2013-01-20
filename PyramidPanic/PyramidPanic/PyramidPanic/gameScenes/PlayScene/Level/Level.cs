@@ -25,6 +25,7 @@ namespace PyramidPanic
         private List<Scorpion> scorpionList;
         private List<Beetle> beetleList;
         private List<Image> treasures;
+        //private List<MovingBlock> movingBlocks;
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
         private LevelPause levelPause;
@@ -35,6 +36,12 @@ namespace PyramidPanic
         private LevelVictory levelVictory;
         private ILevel levelState;
 
+        /*public List<MovingBlock> MovingBlocks
+        {
+            get { return this.movingBlocks; }
+            set { this.movingBlocks = value; }
+        }*/
+            
         public LevelVictory LevelVictory
         {
             get { return this.levelVictory; }
@@ -98,7 +105,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game,int levelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\"+levelIndex+".txt";
+            this.levelPath = @"Content\PlaySceneAssets"+PlayScene.LevelNumber+".txt";
             this.loadAssets();
             this.levelPlay = new LevelPlay(this);
             this.levelPause = new LevelPause(this);
@@ -116,6 +123,9 @@ namespace PyramidPanic
             this.treasures = new List<Image>();
             this.scorpionList = new List<Scorpion>();
             this.beetleList = new List<Beetle>();
+           // MovingBlockManager.CollisionGridDown();
+          //  MovingBlockManager.CollisionGridUp();
+          //  this.movingBlocks = new List<MovingBlock>();
             this.panel = new Panel(this.game, new Vector2(0, 448));
             StreamReader reader = new StreamReader(this.levelPath);
             string line = reader.ReadLine();
@@ -143,7 +153,6 @@ namespace PyramidPanic
             ScorpionManager.Level = this;
             ExplorerManager.Level = this;
             ExplorerManager.Explorer = this.explorer;
-            
            
             
         }
@@ -187,6 +196,13 @@ namespace PyramidPanic
                         return new Tile(this.game,@"transparant", new Vector2(x,y),TileCollision.Passable,'.');
                 case 'D':
                         return new Tile(this.game, @"Door", new Vector2(x, y), TileCollision.Notpassable, 'D');
+                case 's':
+                        return new Tile(this.game, @"Block", new Vector2(x, y), TileCollision.Passable, 's');
+                //case 'h':
+                   //     this.movingBlocks.Add(new MovingBlock(this.game, "Block_vert", new Vector2(x, y),
+                                         //   TileCollision.Notpassable, 'h'));
+                      //  return new Tile(this.game, "Transparant", new Vector2(x, y),
+                                      //      TileCollision.Notpassable, 'h');
                 default:
                     return new Tile(this.game, @"transparant", new Vector2(x, y), TileCollision.Passable, '.');
                     
@@ -205,13 +221,17 @@ namespace PyramidPanic
             {
                 for (int column = 0; column < this.tiles.GetLength(0); column++)
                 {
-                    this.tiles[column,row].draw(gameTime);
+                    this.tiles[column, row].draw(gameTime);
                 }
             }
             foreach (Scorpion scorpion in this.scorpionList)
             {
                 scorpion.Draw(gameTime);
             }
+           // foreach (MovingBlock block in this.movingBlocks)
+            //{
+         //       block.Draw(gameTime);
+           // }
             foreach (Beetle beetle in this.beetleList)
             {
                 beetle.Draw(gameTime);
@@ -224,6 +244,8 @@ namespace PyramidPanic
             {
                 this.explorer.Draw(gameTime);
             }
+            
+
             this.levelState.Draw(gameTime);
             
         }
