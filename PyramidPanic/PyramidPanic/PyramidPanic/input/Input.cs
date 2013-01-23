@@ -80,6 +80,11 @@ namespace PyramidPanic
             return mouseRectangle;
         }
 
+        public static MouseState mouseState()
+        {
+            return (ms);
+        }
+
         //draw
         
     }

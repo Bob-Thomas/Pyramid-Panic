@@ -532,6 +532,42 @@
       <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\Congratulation.xnb</Output>
       <Time>2013-01-18T21:56:26.9609554+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlaySceneAssets\helper\help.png</Source>
+      <Name>PlaySceneAssets\helper\help</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\helper\help.xnb</Output>
+      <Time>2013-01-21T18:43:43.3100721+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\background\Background3.png</Source>
+      <Name>PlaySceneAssets\background\Background3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\background\Background3.xnb</Output>
+      <Time>2013-01-21T19:13:40.5668693+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\overlay\pauseOverlay.png</Source>
+      <Name>PlaySceneAssets\overlay\pauseOverlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\overlay\pauseOverlay.xnb</Output>
+      <Time>2013-01-22T14:17:02.3041477+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\background\Background4.png</Source>
+      <Name>PlaySceneAssets\background\Background4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\bob\Documents\Visual Studio 2012\Visual Studio 2010\Projects\school projects\blok2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlaySceneAssets\background\Background4.xnb</Output>
+      <Time>2013-01-22T18:54:54.7707583+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

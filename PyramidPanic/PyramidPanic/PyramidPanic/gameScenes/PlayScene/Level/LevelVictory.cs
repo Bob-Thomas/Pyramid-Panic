@@ -35,13 +35,12 @@ namespace PyramidPanic
         public LevelVictory(Level level)
         {
             this.level = level;
-            backGround = new Image(this.level.Game,Vector2.Zero , @"PlaySceneAssets/background/Background2");
+            backGround = new Image(this.level.Game,Vector2.Zero , @"PlaySceneAssets/background/Background4");
             this.overlay = new Image(this.level.Game, new Vector2(120f, 100f) , @"PlaySceneAssets/overlay/Congratulation");
             rectangle = new Rectangle((int)overlay.Rectangle.X + 290, (int)overlay.Rectangle.Y + 243, overlay.Rectangle.Width / 10, overlay.Rectangle.Height / 15);
         }
         public void Update(GameTime gameTime)
         {
-            this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             if (Input.DetectKeydown(Keys.Enter))
             {

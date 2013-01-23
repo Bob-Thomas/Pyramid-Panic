@@ -57,6 +57,10 @@ Content\PlaySceneAssets\overlay\overlay.xnb
 Content\PlaySceneAssets\overlay\overlayDoorsAreOpen.xnb
 Content\PlaySceneAssets\overlay\GameOver.xnb
 Content\PlaySceneAssets\overlay\Congratulation.xnb
+Content\PlaySceneAssets\helper\help.xnb
+Content\PlaySceneAssets\background\Background3.xnb
+Content\PlaySceneAssets\overlay\pauseOverlay.xnb
+Content\PlaySceneAssets\background\Background4.xnb
 Content\PlaySceneAssets\Levels\0.txt
 Content\PlaySceneAssets\Levels\3.txt
 Content\PlaySceneAssets\Levels\4.txt

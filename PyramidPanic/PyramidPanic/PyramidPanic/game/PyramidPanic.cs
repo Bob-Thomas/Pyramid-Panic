@@ -50,7 +50,6 @@ namespace PyramidPanic
 
         protected override void LoadContent()
         {
-            PlayScene.LevelNumber = 0;
             this.spriteBatch = new SpriteBatch(GraphicsDevice);
             this.gameState = new StartScene(this);
 
@@ -62,12 +61,11 @@ namespace PyramidPanic
 
         protected override void Update(GameTime gameTime)
         {
-
+            Input.update();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             gameState.update(gameTime);
-            Input.update();
             base.Update(gameTime);
         }
 

@@ -34,6 +34,7 @@ namespace PyramidPanic
         private LevelOpenDoor levelOpenDoor;
         private LevelNextLevel levelNextLevel;
         private LevelVictory levelVictory;
+        private LevelPaused levelPaused;
         private ILevel levelState;
 
         /*public List<MovingBlock> MovingBlocks
@@ -53,6 +54,10 @@ namespace PyramidPanic
         public LevelNextLevel LevelNextLevel
         {
             get { return this.levelNextLevel; }
+        }
+        public LevelPaused LevelPaused
+        {
+            get { return this.levelPaused; }
         }
         public List<Beetle> BeetleList
         {
@@ -82,6 +87,7 @@ namespace PyramidPanic
         public ILevel LevelState
         {
             set { this.levelState = value; }
+            get { return this.levelState; }
         }
         public LevelPause levelpause
         {
@@ -105,7 +111,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game,int levelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets"+PlayScene.LevelNumber+".txt";
+            this.levelPath = @"Content\PlaySceneAssets\Levels\"+PlayScene.LevelNumber+".txt";
             this.loadAssets();
             this.levelPlay = new LevelPlay(this);
             this.levelPause = new LevelPause(this);
@@ -113,6 +119,7 @@ namespace PyramidPanic
             this.levelGameOver = new LevelGameOver(this);
             this.levelNextLevel = new LevelNextLevel(this);
             this.levelVictory = new LevelVictory(this);
+            this.levelPaused = new LevelPaused(this);
             this.levelState = new LevelPlay(this);
             Score.Level = this;
             Score.initialize();

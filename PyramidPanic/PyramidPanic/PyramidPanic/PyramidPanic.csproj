@@ -162,6 +162,7 @@
     <Compile Include="gameScenes\PlayScene\explorer\Up.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="gameScenes\PlayScene\Level\LevelPaused.cs" />
     <Compile Include="gameScenes\PlayScene\Level\LevelVictory.cs" />
     <Compile Include="gameScenes\PlayScene\Level\LevelNextLevel.cs" />
     <Compile Include="gameScenes\PlayScene\Level\LevelGameOver.cs" />

@@ -21,6 +21,10 @@ namespace PyramidPanic
         }
         public void Update(GameTime gameTime)
         {
+            if (Input.DetectKeydown(Keys.Escape))
+            {
+                this.level.LevelState = this.level.LevelPaused;
+            }
             foreach (Scorpion scorpion in this.level.ScorpionList)
             {
                 scorpion.Update(gameTime);

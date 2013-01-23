@@ -41,9 +41,18 @@ namespace PyramidPanic
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (timer > pauseTime)
             {
-                PlayScene.LevelNumber += 1;
-                Score.MaxPointDoors = 0;
-                this.level.Game.GameState = new PlayScene(this.level.Game);
+                if (PlayScene.LevelNumber == 10)
+                {
+                }
+                else
+                {
+
+                    PlayScene.LevelNumber += 1;
+                    Score.MaxPointDoors = 0;
+                    this.level.Game.GameState = new PlayScene(this.level.Game);
+                }
+                
+
 
             }
         }
